@@ -1,4 +1,5 @@
 import { NegociacaoController } from "./controllers/negociacao-controller.js";
+import { Negociacao } from "./models/negociacao.js";
 
 const controller = new NegociacaoController
 const form = document.querySelector('.form')
@@ -10,4 +11,12 @@ if (form) {
     })
 } else{
     throw Error('Formulário pode ter valor Nulo')
+}
+
+const botaoImporta = document.querySelector('#botao-importa')
+
+if(botaoImporta){
+    botaoImporta.addEventListener('click', ()=>{
+        controller.importaDados()
+    })
 }

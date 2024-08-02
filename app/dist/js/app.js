@@ -10,3 +10,9 @@ if (form) {
 else {
     throw Error('Formulário pode ter valor Nulo');
 }
+const botaoImporta = document.querySelector('#botao-importa');
+if (botaoImporta) {
+    botaoImporta.addEventListener('click', () => {
+        controller.importaDados();
+    });
+}
